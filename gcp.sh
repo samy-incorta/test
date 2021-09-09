@@ -7,14 +7,14 @@ function recommender_and_list
     --project=static-epigram-143508 \
     --location=us-central1-c \
     --recommender=google.compute.instance.MachineTypeRecommender \
-    --format=json | grep "resourceName" | grep 'fullexecution\|squad5\|datavalidation\|cmcautomation\|engineloader\|upgrade\|datavalidationengineloader\|queryperformance\|views\|cypress\|verifybuild|'| \
+    --format=json | grep "resourceName" | grep 'fullexecution\|squad5\|datavalidation\|cmcautomation\|engineloader\|upgrade\|datavalidationengineloader\|queryperformance\|views\|verifybuild|'| \
     awk '{print $2}' > recommender_vms.txt
 
 
     ## List The VMs to compare them with the above output 
     ## and make sure the output above is accurate
     gcloud compute instances --project=static-epigram-143508 list | \
-    grep 'fullexecution\|squad5\|datavalidation\|cmcautomation\|engineloader\|upgrade\|datavalidationengineloader\|queryperformance\|views\|cypress\|verifybuild|' | awk '{print $1}' > list_vms.txt 
+    grep 'fullexecution\|squad5\|datavalidation\|cmcautomation\|engineloader\|upgrade\|datavalidationengineloader\|queryperformance\|views\|verifybuild|' | awk '{print $1}' > list_vms.txt 
 
 
     ## Remove the double quotes from VMs name
