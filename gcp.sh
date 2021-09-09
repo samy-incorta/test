@@ -43,6 +43,7 @@ function Y_or_N
             cat idle_vms.txt
             echo "---------------------"
             stop_VMs
+            break
 
 #             read -p "Do you want to stop the above VMs? [Y/N]" yn
 #             case $yn in
