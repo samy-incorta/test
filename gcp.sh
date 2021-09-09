@@ -43,13 +43,13 @@ function Y_or_N
             cat idle_vms.txt
             echo "---------------------"
 
-            read -p "Do you want to stop the above VMs? [Y/N]" yn
-            case $yn in
-                [Yy]* ) stop_VMs; 
-                break;;
-                [Nn]* ) exit;;
-                * ) echo "Please answer [Y/N]";;
-            esac
+#             read -p "Do you want to stop the above VMs? [Y/N]" yn
+#             case $yn in
+#                 [Yy]* ) stop_VMs; 
+#                 break;;
+#                 [Nn]* ) exit;;
+#                 * ) echo "Please answer [Y/N]";;
+#             esac
 
         else
             echo "No Idle VMs Found!"
