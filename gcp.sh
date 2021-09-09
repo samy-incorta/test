@@ -26,7 +26,7 @@ function stop_VMs
 {
     while read vm; 
     do
-        gcloud compute instances stop $vm --zone=us-central1-a
+#         gcloud compute instances stop $vm --zone=us-central1-a
         echo stopping.. $vm
     done <recommender_vms.txt
 }
